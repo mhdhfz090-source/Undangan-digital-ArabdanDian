@@ -1,0 +1,192 @@
+  html {
+  scroll-behavior: smooth;
+}
+  body{
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  margin: 20px  20pxx;
+  scroll-behavior: smooth;
+  height: 1500vh;
+}
+.no-scroll{
+  height: 100vh;
+  overflow: hidden;
+}
+
+.beranda{
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #ffafbd, #ffffff);
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0;
+  }
+  .beranda h1 span{
+    color: #ff006f;
+  }
+  a{
+    padding: 10px;
+    margin: 5px;
+    text-decoration: none;
+    color: #ff006f;
+    border-radius: 20px;
+    font-weight: 1000;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 2px 5px black;
+    transition: transform 0.3s ease;
+  }
+  
+   a:hover{
+    background-color: rgb(255, 0, 149);
+    box-shadow: 1px 3px 7px rgb(255, 78, 78);
+    color: rgb(255, 255, 255);
+    transform: translateY(-10px);
+}
+
+
+h1{
+    font-family: "Grey Qo", cursive;
+  font-weight: 80;
+  font-size: 5rem;
+  font-style: normal;
+  text-align: center;
+  }
+
+.jadwal{
+  margin-top: 20px;
+}
+
+
+
+     
+
+        .countdown-wrapper {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 50px 10% ;
+        }
+
+        .box {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 5px 5px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        .number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #ad1457;
+        }
+
+        .label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: #880e4f;
+        }
+
+        @media (max-width: 480px) {
+            .countdown-wrapper {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .number { font-size: 2rem; }
+        }
+
+.bunga{
+  display: flex;
+    position: fixed;
+    animation: goyang 4s ease-in-out infinite;
+      transform-origin: left;
+      left: -55px;
+      bottom: 0px;
+      z-index: 1020;
+
+}
+.bunga2{
+  display: flex;
+    position: fixed;
+    animation: goyang1 5s ease-in-out infinite;
+      transform-origin: bottom;
+      left: 1px;
+      bottom: -10px;
+      z-index: 1010;
+
+
+}
+#btn-buka{
+  scroll-behavior: smooth;
+}
+.bunga3{
+  display: flex;
+  position: fixed;
+  animation: goyang2 3s ease-in-out infinite;
+  transform-origin: right;
+  right: -5px;
+      bottom: -10px;
+      z-index: 1010;
+      
+    }
+    bunga4{
+      display: flex;
+        position: fixed;
+        animation: goyang3 4s ease-in-out infinite;
+          transform-origin: left;
+          left: 100px;
+          bottom: -30px;
+          z-index: 1000;
+    }
+    
+    @keyframes goyang{
+      0%, 100%{transform:rotate(0deg)}
+      50%{transform:rotate(-2deg)}
+    }
+    @keyframes goyang1{
+      0%, 100%{transform:rotate(0deg)}
+      50%{transform:rotate(-1deg)}
+    }
+    @keyframes goyang2{
+      0%, 100%{transform:rotate(0.5deg)}
+      50%{transform:rotate(-2deg)}
+}
+    @keyframes goyang3{
+      0%, 100%{transform:rotate(0.5deg)}
+      50%{transform:rotate(-2deg)}
+}
+.background-undangan{
+    background: linear-gradient(180deg, #ffa7a7, #ffffff);
+}
+#undangan{
+  scroll-behavior: smooth;
+  animation: 2s;
+  margin-top: 3rem;
+}
+.gambar-pria img , .gambar-wanita img{
+  border-radius: 50%;
+}
+.isi-undangan h1{
+  font-size: 3rem;
+}
+.isi-undangan2{
+  display: block;
+  justify-content: space-between;
+}
+
+#perjalanan{
+  margin-top: 20rem;
+}

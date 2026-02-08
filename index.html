@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body class="no-scroll">
+    <section id="beranda" class="beranda">
+  <h3>Selamat Menikah kepada :</h3>
+  <h1> <span>Arif </span> rahman & <span>Dian </span> Rahayu</h1>
+  <p>Marilah bersama merayakan hari istiemwa bersama calon pengantin kita tercinta</p>
+  <p>Turu mengundang kepada yang terhormat bapak/ibu/saudara/i di tempat : </p>
+  <h2>Muhammad Hafiz (Dhabit)</h2>
+  <a href="#undangan" id="btn-buka">Buka undangan</a>
+
+
+ <div class="jadwal">
+    <h4>Yang akan di laksanakan pada :</h4>
+ </div>
+        <div class="countdown-wrapper">
+            <div class="box">
+                <span class="number" id="days">00</span>
+                <span class="label">Hari</span>
+            </div>
+            <div class="box">
+                <span class="number" id="hours">00</span>
+                <span class="label">Jam</span>
+            </div>
+            <div class="box">
+                <span class="number" id="minutes">00</span>
+                <span class="label">Menit</span>
+            </div>
+            <div class="box">
+                <span class="number" id="seconds">00</span>
+                <span class="label">Detik</span>
+            </div>
+        </div>
+</section>
+
+
+<div class="bunga">
+    <img src="image/bunga1.png" alt="dedaunan" width="250px">
+</div>
+<div class="bunga2">
+    <img src="image/bunga2.png" alt="dedaunan" width="150px">
+</div>
+<div class="bunga3">
+    <img src="image/bunga3.png" alt="dedaunan" width="150px">
+</div>
+
+
+<section id="undangan" class="undangan">
+    <div class="background-undangan">
+    <div class="isi-undangan">
+        <h1>Assalamulaikum warohmatullahi wabarokatuh</h1>
+    </div>
+    <div class="isi-undangan2">
+    <div class="gambar-pria">
+        <img src="image/arab.jpg" alt="arab" width="100px">
+        <h3>Arif rahman</h3>
+        <p>Anak kedua dari bapaknya</p>
+    </div>
+    <div class="gambar-wanita">
+        <img src="image/dian.jpg" alt="dian" width="100px">
+        <h3>Dian rahayu</h3>
+        <p>Anak kedua dari bapaknya</p>
+    </div>
+    </div>
+      <a href="#perjalanan" id="btn-buka">lihat perjalanan kami</a>
+
+</div>
+</section>
+
+<section id="perjalanan">
+    <h1>Perjalanan kisah asmara kami</h1>
+    <img src="image/perjalanan.png" alt="perjalanan" width="350px">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus itaque consequuntur quae unde hic, non atque officiis, dolores nihil blanditiis, alias mollitia maxime quisquam minima. Sit, laudantium placeat harum porro laborum doloribus quo nesciunt optio omnis dolor officia quam officiis. Beatae est voluptatum quod debitis eum amet esse officia dolorem!</p>
+
+</section>
+
+
+<script>
+        // ATUR TANGGAL TUJUAN DI SINI
+        const targetDate = new Date("feb 25, 2027 00:00:00").getTime();
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const gap = targetDate - now;
+
+            // Logika hitung waktu
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
+
+            const d = Math.floor(gap / day);
+            const h = Math.floor((gap % day) / hour);
+            const m = Math.floor((gap % hour) / minute);
+            const s = Math.floor((gap % minute) / second);
+
+            // Update ke HTML
+            document.getElementById("days").innerText = d < 10 ? "0" + d : d;
+            document.getElementById("hours").innerText = h < 10 ? "0" + h : h;
+            document.getElementById("minutes").innerText = m < 10 ? "0" + m : m;
+            document.getElementById("seconds").innerText = s < 10 ? "0" + s : s;
+
+            // Jika waktu habis
+            if (gap < 0) {
+                clearInterval(interval);
+                document.querySelector(".container").innerHTML = "<h1>Event Started!</h1>";
+            }
+        };
+
+        const interval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Jalankan langsung tanpa menunggu 1 detik pertama
+
+
+
+const tombolBuka = document.getElementById('btn-buka');
+
+tombolBuka.addEventListener('click', function() {
+  // Hapus class no-scroll dari body
+  document.body.classList.remove('no-scroll');
+});
+    </script>
+
+</body>
+</html>
